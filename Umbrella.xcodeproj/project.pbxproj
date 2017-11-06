@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB93A0491FB0D01F00E7990B /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93A0481FB0D01F00E7990B /* Hourly.swift */; };
+		BB93A04B1FB0D02B00E7990B /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93A04A1FB0D02B00E7990B /* Current.swift */; };
 		BBFD3E071FB00410006AE0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E061FB00410006AE0C5 /* AppDelegate.swift */; };
 		BBFD3E091FB00410006AE0C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E081FB00410006AE0C5 /* ViewController.swift */; };
 		BBFD3E0C1FB00410006AE0C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E0A1FB00410006AE0C5 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB93A0481FB0D01F00E7990B /* Hourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hourly.swift; sourceTree = "<group>"; };
+		BB93A04A1FB0D02B00E7990B /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		BBFD3E031FB00410006AE0C5 /* Umbrella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Umbrella.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFD3E061FB00410006AE0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBFD3E081FB00410006AE0C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		BBFD3E3A1FB004AC006AE0C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BB93A0481FB0D01F00E7990B /* Hourly.swift */,
+				BB93A04A1FB0D02B00E7990B /* Current.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB93A0491FB0D01F00E7990B /* Hourly.swift in Sources */,
+				BB93A04B1FB0D02B00E7990B /* Current.swift in Sources */,
 				BBFD3E0F1FB00410006AE0C5 /* Umbrella.xcdatamodeld in Sources */,
 				BBFD3E401FB004D1006AE0C5 /* CollectionViewCellController.swift in Sources */,
 				BBFD3E091FB00410006AE0C5 /* ViewController.swift in Sources */,

@@ -7,13 +7,12 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 protocol NetworkManagerDelegate: class {
     func didDownloadPost(postArray: [String: Any])
 }
 
-protocol NetworkManagerDelegateSerie: class {
+/*protocol NetworkManagerDelegateSerie: class {
     func didDownloadPost(postArray: Serie)
 }
 
@@ -27,4 +26,4 @@ protocol NetworkManagerDelegateChapter: class {
 
 protocol NetworkManagerImage: class {
     func didDownloadImage(image: UIImage)
-}
+}*/

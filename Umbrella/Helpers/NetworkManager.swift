@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class NetworkManager {
     
     var delegate: NetworkManagerDelegate?
-    var image: NetworkManagerImage?
+    //var image: NetworkManagerImage?
   
     func downloadAPIPost(imdbID: String){
         let urlString = URL(string: "\(oMDBAPI.endPoint)\(imdbID)")
@@ -37,7 +35,7 @@ class NetworkManager {
         }
     }
     
-    func getImage(imgUrl: String){
+    /*func getImage(imgUrl: String){
         
         let imgURL = URL(string: imgUrl)
         let task = URLSession.shared.dataTask(with: imgURL!) { [weak self] (data, response, error) in
@@ -55,7 +53,7 @@ class NetworkManager {
             }
         }
         task.resume()
-    }
+    }*/
     
 }
 
