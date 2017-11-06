@@ -7,66 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB31DBDA1FAE55AB00332EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31DBD91FAE55AB00332EDF /* AppDelegate.swift */; };
-		BB31DBDC1FAE55AB00332EDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31DBDB1FAE55AB00332EDF /* ViewController.swift */; };
-		BB31DBDF1FAE55AB00332EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB31DBDD1FAE55AB00332EDF /* Main.storyboard */; };
-		BB31DBE21FAE55AB00332EDF /* Umbrella.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB31DBE01FAE55AB00332EDF /* Umbrella.xcdatamodeld */; };
-		BB31DBE41FAE55AB00332EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB31DBE31FAE55AB00332EDF /* Assets.xcassets */; };
-		BB31DBE71FAE55AB00332EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB31DBE51FAE55AB00332EDF /* LaunchScreen.storyboard */; };
-		BB31DBF21FAE55AB00332EDF /* UmbrellaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31DBF11FAE55AB00332EDF /* UmbrellaTests.swift */; };
-		BB31DBFD1FAE55AB00332EDF /* UmbrellaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31DBFC1FAE55AB00332EDF /* UmbrellaUITests.swift */; };
+		BB93A0491FB0D01F00E7990B /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93A0481FB0D01F00E7990B /* Hourly.swift */; };
+		BB93A04B1FB0D02B00E7990B /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93A04A1FB0D02B00E7990B /* Current.swift */; };
+		BBFD3E071FB00410006AE0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E061FB00410006AE0C5 /* AppDelegate.swift */; };
+		BBFD3E091FB00410006AE0C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E081FB00410006AE0C5 /* ViewController.swift */; };
+		BBFD3E0C1FB00410006AE0C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E0A1FB00410006AE0C5 /* Main.storyboard */; };
+		BBFD3E0F1FB00410006AE0C5 /* Umbrella.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E0D1FB00410006AE0C5 /* Umbrella.xcdatamodeld */; };
+		BBFD3E111FB00410006AE0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E101FB00410006AE0C5 /* Assets.xcassets */; };
+		BBFD3E141FB00410006AE0C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E121FB00410006AE0C5 /* LaunchScreen.storyboard */; };
+		BBFD3E1F1FB00410006AE0C5 /* UmbrellaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E1E1FB00410006AE0C5 /* UmbrellaTests.swift */; };
+		BBFD3E2A1FB00410006AE0C5 /* UmbrellaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E291FB00410006AE0C5 /* UmbrellaUITests.swift */; };
+		BBFD3E3F1FB004D1006AE0C5 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E3B1FB004D0006AE0C5 /* TableViewCellController.swift */; };
+		BBFD3E401FB004D1006AE0C5 /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E3C1FB004D0006AE0C5 /* CollectionViewCellController.swift */; };
+		BBFD3E411FB004D1006AE0C5 /* TableViewCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E3D1FB004D1006AE0C5 /* TableViewCellController.xib */; };
+		BBFD3E421FB004D1006AE0C5 /* CollectionViewCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD3E3E1FB004D1006AE0C5 /* CollectionViewCellController.xib */; };
+		BBFD3E4A1FB0B5EF006AE0C5 /* NetworkManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E471FB0B5EF006AE0C5 /* NetworkManagerDelegate.swift */; };
+		BBFD3E4B1FB0B5EF006AE0C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E481FB0B5EF006AE0C5 /* NetworkManager.swift */; };
+		BBFD3E4C1FB0B5EF006AE0C5 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD3E491FB0B5EF006AE0C5 /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB31DBEE1FAE55AB00332EDF /* PBXContainerItemProxy */ = {
+		BBFD3E1B1FB00410006AE0C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BB31DBCE1FAE55AB00332EDF /* Project object */;
+			containerPortal = BBFD3DFB1FB00410006AE0C5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB31DBD51FAE55AB00332EDF;
+			remoteGlobalIDString = BBFD3E021FB00410006AE0C5;
 			remoteInfo = Umbrella;
 		};
-		BB31DBF91FAE55AB00332EDF /* PBXContainerItemProxy */ = {
+		BBFD3E261FB00410006AE0C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BB31DBCE1FAE55AB00332EDF /* Project object */;
+			containerPortal = BBFD3DFB1FB00410006AE0C5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB31DBD51FAE55AB00332EDF;
+			remoteGlobalIDString = BBFD3E021FB00410006AE0C5;
 			remoteInfo = Umbrella;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB31DBD61FAE55AB00332EDF /* Umbrella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Umbrella.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB31DBD91FAE55AB00332EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB31DBDB1FAE55AB00332EDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB31DBDE1FAE55AB00332EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB31DBE11FAE55AB00332EDF /* Umbrella.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Umbrella.xcdatamodel; sourceTree = "<group>"; };
-		BB31DBE31FAE55AB00332EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB31DBE61FAE55AB00332EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BB31DBE81FAE55AB00332EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB31DBED1FAE55AB00332EDF /* UmbrellaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB31DBF11FAE55AB00332EDF /* UmbrellaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaTests.swift; sourceTree = "<group>"; };
-		BB31DBF31FAE55AB00332EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB31DBF81FAE55AB00332EDF /* UmbrellaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB31DBFC1FAE55AB00332EDF /* UmbrellaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaUITests.swift; sourceTree = "<group>"; };
-		BB31DBFE1FAE55AB00332EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB93A0481FB0D01F00E7990B /* Hourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hourly.swift; sourceTree = "<group>"; };
+		BB93A04A1FB0D02B00E7990B /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		BBFD3E031FB00410006AE0C5 /* Umbrella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Umbrella.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFD3E061FB00410006AE0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBFD3E081FB00410006AE0C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBFD3E0B1FB00410006AE0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBFD3E0E1FB00410006AE0C5 /* Umbrella.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Umbrella.xcdatamodel; sourceTree = "<group>"; };
+		BBFD3E101FB00410006AE0C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBFD3E131FB00410006AE0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBFD3E151FB00410006AE0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBFD3E1A1FB00410006AE0C5 /* UmbrellaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFD3E1E1FB00410006AE0C5 /* UmbrellaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaTests.swift; sourceTree = "<group>"; };
+		BBFD3E201FB00410006AE0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBFD3E251FB00410006AE0C5 /* UmbrellaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFD3E291FB00410006AE0C5 /* UmbrellaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaUITests.swift; sourceTree = "<group>"; };
+		BBFD3E2B1FB00410006AE0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBFD3E3B1FB004D0006AE0C5 /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellController.swift; path = Umbrella/TableViewCellController.swift; sourceTree = SOURCE_ROOT; };
+		BBFD3E3C1FB004D0006AE0C5 /* CollectionViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCellController.swift; path = Umbrella/CollectionViewCellController.swift; sourceTree = SOURCE_ROOT; };
+		BBFD3E3D1FB004D1006AE0C5 /* TableViewCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellController.xib; path = Umbrella/TableViewCellController.xib; sourceTree = SOURCE_ROOT; };
+		BBFD3E3E1FB004D1006AE0C5 /* CollectionViewCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionViewCellController.xib; path = Umbrella/CollectionViewCellController.xib; sourceTree = SOURCE_ROOT; };
+		BBFD3E471FB0B5EF006AE0C5 /* NetworkManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerDelegate.swift; sourceTree = "<group>"; };
+		BBFD3E481FB0B5EF006AE0C5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BBFD3E491FB0B5EF006AE0C5 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB31DBD31FAE55AB00332EDF /* Frameworks */ = {
+		BBFD3E001FB00410006AE0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBEA1FAE55AB00332EDF /* Frameworks */ = {
+		BBFD3E171FB00410006AE0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBF51FAE55AB00332EDF /* Frameworks */ = {
+		BBFD3E221FB00410006AE0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,68 +94,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB31DBCD1FAE55AB00332EDF = {
+		BBFD3DFA1FB00410006AE0C5 = {
 			isa = PBXGroup;
 			children = (
-				BB31DBD81FAE55AB00332EDF /* Umbrella */,
-				BB31DBF01FAE55AB00332EDF /* UmbrellaTests */,
-				BB31DBFB1FAE55AB00332EDF /* UmbrellaUITests */,
-				BB31DBD71FAE55AB00332EDF /* Products */,
+				BBFD3E051FB00410006AE0C5 /* Umbrella */,
+				BBFD3E1D1FB00410006AE0C5 /* UmbrellaTests */,
+				BBFD3E281FB00410006AE0C5 /* UmbrellaUITests */,
+				BBFD3E041FB00410006AE0C5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB31DBD71FAE55AB00332EDF /* Products */ = {
+		BBFD3E041FB00410006AE0C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB31DBD61FAE55AB00332EDF /* Umbrella.app */,
-				BB31DBED1FAE55AB00332EDF /* UmbrellaTests.xctest */,
-				BB31DBF81FAE55AB00332EDF /* UmbrellaUITests.xctest */,
+				BBFD3E031FB00410006AE0C5 /* Umbrella.app */,
+				BBFD3E1A1FB00410006AE0C5 /* UmbrellaTests.xctest */,
+				BBFD3E251FB00410006AE0C5 /* UmbrellaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB31DBD81FAE55AB00332EDF /* Umbrella */ = {
+		BBFD3E051FB00410006AE0C5 /* Umbrella */ = {
 			isa = PBXGroup;
 			children = (
-				BB31DBD91FAE55AB00332EDF /* AppDelegate.swift */,
-				BB31DBDB1FAE55AB00332EDF /* ViewController.swift */,
-				BB31DBDD1FAE55AB00332EDF /* Main.storyboard */,
-				BB31DBE31FAE55AB00332EDF /* Assets.xcassets */,
-				BB31DBE51FAE55AB00332EDF /* LaunchScreen.storyboard */,
-				BB31DBE81FAE55AB00332EDF /* Info.plist */,
-				BB31DBE01FAE55AB00332EDF /* Umbrella.xcdatamodeld */,
+				BBFD3E461FB0B5D1006AE0C5 /* Helpers */,
+				BBFD3E3A1FB004AC006AE0C5 /* Models */,
+				BBFD3E391FB004A4006AE0C5 /* Controllers */,
+				BBFD3E381FB0049E006AE0C5 /* Views */,
+				BBFD3E061FB00410006AE0C5 /* AppDelegate.swift */,
+				BBFD3E101FB00410006AE0C5 /* Assets.xcassets */,
+				BBFD3E121FB00410006AE0C5 /* LaunchScreen.storyboard */,
+				BBFD3E151FB00410006AE0C5 /* Info.plist */,
+				BBFD3E0D1FB00410006AE0C5 /* Umbrella.xcdatamodeld */,
 			);
 			path = Umbrella;
 			sourceTree = "<group>";
 		};
-		BB31DBF01FAE55AB00332EDF /* UmbrellaTests */ = {
+		BBFD3E1D1FB00410006AE0C5 /* UmbrellaTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB31DBF11FAE55AB00332EDF /* UmbrellaTests.swift */,
-				BB31DBF31FAE55AB00332EDF /* Info.plist */,
+				BBFD3E1E1FB00410006AE0C5 /* UmbrellaTests.swift */,
+				BBFD3E201FB00410006AE0C5 /* Info.plist */,
 			);
 			path = UmbrellaTests;
 			sourceTree = "<group>";
 		};
-		BB31DBFB1FAE55AB00332EDF /* UmbrellaUITests */ = {
+		BBFD3E281FB00410006AE0C5 /* UmbrellaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BB31DBFC1FAE55AB00332EDF /* UmbrellaUITests.swift */,
-				BB31DBFE1FAE55AB00332EDF /* Info.plist */,
+				BBFD3E291FB00410006AE0C5 /* UmbrellaUITests.swift */,
+				BBFD3E2B1FB00410006AE0C5 /* Info.plist */,
 			);
 			path = UmbrellaUITests;
+			sourceTree = "<group>";
+		};
+		BBFD3E381FB0049E006AE0C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBFD3E0A1FB00410006AE0C5 /* Main.storyboard */,
+				BBFD3E3C1FB004D0006AE0C5 /* CollectionViewCellController.swift */,
+				BBFD3E3E1FB004D1006AE0C5 /* CollectionViewCellController.xib */,
+				BBFD3E3B1FB004D0006AE0C5 /* TableViewCellController.swift */,
+				BBFD3E3D1FB004D1006AE0C5 /* TableViewCellController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBFD3E391FB004A4006AE0C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBFD3E081FB00410006AE0C5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BBFD3E3A1FB004AC006AE0C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB93A0481FB0D01F00E7990B /* Hourly.swift */,
+				BB93A04A1FB0D02B00E7990B /* Current.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBFD3E461FB0B5D1006AE0C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BBFD3E481FB0B5EF006AE0C5 /* NetworkManager.swift */,
+				BBFD3E471FB0B5EF006AE0C5 /* NetworkManagerDelegate.swift */,
+				BBFD3E491FB0B5EF006AE0C5 /* WeatherAPI.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB31DBD51FAE55AB00332EDF /* Umbrella */ = {
+		BBFD3E021FB00410006AE0C5 /* Umbrella */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB31DC011FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "Umbrella" */;
+			buildConfigurationList = BBFD3E2E1FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "Umbrella" */;
 			buildPhases = (
-				BB31DBD21FAE55AB00332EDF /* Sources */,
-				BB31DBD31FAE55AB00332EDF /* Frameworks */,
-				BB31DBD41FAE55AB00332EDF /* Resources */,
+				BBFD3DFF1FB00410006AE0C5 /* Sources */,
+				BBFD3E001FB00410006AE0C5 /* Frameworks */,
+				BBFD3E011FB00410006AE0C5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,72 +204,72 @@
 			);
 			name = Umbrella;
 			productName = Umbrella;
-			productReference = BB31DBD61FAE55AB00332EDF /* Umbrella.app */;
+			productReference = BBFD3E031FB00410006AE0C5 /* Umbrella.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB31DBEC1FAE55AB00332EDF /* UmbrellaTests */ = {
+		BBFD3E191FB00410006AE0C5 /* UmbrellaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB31DC041FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "UmbrellaTests" */;
+			buildConfigurationList = BBFD3E311FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "UmbrellaTests" */;
 			buildPhases = (
-				BB31DBE91FAE55AB00332EDF /* Sources */,
-				BB31DBEA1FAE55AB00332EDF /* Frameworks */,
-				BB31DBEB1FAE55AB00332EDF /* Resources */,
+				BBFD3E161FB00410006AE0C5 /* Sources */,
+				BBFD3E171FB00410006AE0C5 /* Frameworks */,
+				BBFD3E181FB00410006AE0C5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB31DBEF1FAE55AB00332EDF /* PBXTargetDependency */,
+				BBFD3E1C1FB00410006AE0C5 /* PBXTargetDependency */,
 			);
 			name = UmbrellaTests;
 			productName = UmbrellaTests;
-			productReference = BB31DBED1FAE55AB00332EDF /* UmbrellaTests.xctest */;
+			productReference = BBFD3E1A1FB00410006AE0C5 /* UmbrellaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BB31DBF71FAE55AB00332EDF /* UmbrellaUITests */ = {
+		BBFD3E241FB00410006AE0C5 /* UmbrellaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB31DC071FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "UmbrellaUITests" */;
+			buildConfigurationList = BBFD3E341FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "UmbrellaUITests" */;
 			buildPhases = (
-				BB31DBF41FAE55AB00332EDF /* Sources */,
-				BB31DBF51FAE55AB00332EDF /* Frameworks */,
-				BB31DBF61FAE55AB00332EDF /* Resources */,
+				BBFD3E211FB00410006AE0C5 /* Sources */,
+				BBFD3E221FB00410006AE0C5 /* Frameworks */,
+				BBFD3E231FB00410006AE0C5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB31DBFA1FAE55AB00332EDF /* PBXTargetDependency */,
+				BBFD3E271FB00410006AE0C5 /* PBXTargetDependency */,
 			);
 			name = UmbrellaUITests;
 			productName = UmbrellaUITests;
-			productReference = BB31DBF81FAE55AB00332EDF /* UmbrellaUITests.xctest */;
+			productReference = BBFD3E251FB00410006AE0C5 /* UmbrellaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB31DBCE1FAE55AB00332EDF /* Project object */ = {
+		BBFD3DFB1FB00410006AE0C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Mobile Consulting Solutions";
 				TargetAttributes = {
-					BB31DBD51FAE55AB00332EDF = {
+					BBFD3E021FB00410006AE0C5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					BB31DBEC1FAE55AB00332EDF = {
+					BBFD3E191FB00410006AE0C5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = BB31DBD51FAE55AB00332EDF;
+						TestTargetID = BBFD3E021FB00410006AE0C5;
 					};
-					BB31DBF71FAE55AB00332EDF = {
+					BBFD3E241FB00410006AE0C5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = BB31DBD51FAE55AB00332EDF;
+						TestTargetID = BBFD3E021FB00410006AE0C5;
 					};
 				};
 			};
-			buildConfigurationList = BB31DBD11FAE55AB00332EDF /* Build configuration list for PBXProject "Umbrella" */;
+			buildConfigurationList = BBFD3DFE1FB00410006AE0C5 /* Build configuration list for PBXProject "Umbrella" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,37 +277,39 @@
 				en,
 				Base,
 			);
-			mainGroup = BB31DBCD1FAE55AB00332EDF;
-			productRefGroup = BB31DBD71FAE55AB00332EDF /* Products */;
+			mainGroup = BBFD3DFA1FB00410006AE0C5;
+			productRefGroup = BBFD3E041FB00410006AE0C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB31DBD51FAE55AB00332EDF /* Umbrella */,
-				BB31DBEC1FAE55AB00332EDF /* UmbrellaTests */,
-				BB31DBF71FAE55AB00332EDF /* UmbrellaUITests */,
+				BBFD3E021FB00410006AE0C5 /* Umbrella */,
+				BBFD3E191FB00410006AE0C5 /* UmbrellaTests */,
+				BBFD3E241FB00410006AE0C5 /* UmbrellaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB31DBD41FAE55AB00332EDF /* Resources */ = {
+		BBFD3E011FB00410006AE0C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB31DBE71FAE55AB00332EDF /* LaunchScreen.storyboard in Resources */,
-				BB31DBE41FAE55AB00332EDF /* Assets.xcassets in Resources */,
-				BB31DBDF1FAE55AB00332EDF /* Main.storyboard in Resources */,
+				BBFD3E421FB004D1006AE0C5 /* CollectionViewCellController.xib in Resources */,
+				BBFD3E141FB00410006AE0C5 /* LaunchScreen.storyboard in Resources */,
+				BBFD3E111FB00410006AE0C5 /* Assets.xcassets in Resources */,
+				BBFD3E0C1FB00410006AE0C5 /* Main.storyboard in Resources */,
+				BBFD3E411FB004D1006AE0C5 /* TableViewCellController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBEB1FAE55AB00332EDF /* Resources */ = {
+		BBFD3E181FB00410006AE0C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBF61FAE55AB00332EDF /* Resources */ = {
+		BBFD3E231FB00410006AE0C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,60 +319,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB31DBD21FAE55AB00332EDF /* Sources */ = {
+		BBFD3DFF1FB00410006AE0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB31DBE21FAE55AB00332EDF /* Umbrella.xcdatamodeld in Sources */,
-				BB31DBDC1FAE55AB00332EDF /* ViewController.swift in Sources */,
-				BB31DBDA1FAE55AB00332EDF /* AppDelegate.swift in Sources */,
+				BB93A0491FB0D01F00E7990B /* Hourly.swift in Sources */,
+				BB93A04B1FB0D02B00E7990B /* Current.swift in Sources */,
+				BBFD3E0F1FB00410006AE0C5 /* Umbrella.xcdatamodeld in Sources */,
+				BBFD3E401FB004D1006AE0C5 /* CollectionViewCellController.swift in Sources */,
+				BBFD3E091FB00410006AE0C5 /* ViewController.swift in Sources */,
+				BBFD3E4B1FB0B5EF006AE0C5 /* NetworkManager.swift in Sources */,
+				BBFD3E4C1FB0B5EF006AE0C5 /* WeatherAPI.swift in Sources */,
+				BBFD3E071FB00410006AE0C5 /* AppDelegate.swift in Sources */,
+				BBFD3E3F1FB004D1006AE0C5 /* TableViewCellController.swift in Sources */,
+				BBFD3E4A1FB0B5EF006AE0C5 /* NetworkManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBE91FAE55AB00332EDF /* Sources */ = {
+		BBFD3E161FB00410006AE0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB31DBF21FAE55AB00332EDF /* UmbrellaTests.swift in Sources */,
+				BBFD3E1F1FB00410006AE0C5 /* UmbrellaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB31DBF41FAE55AB00332EDF /* Sources */ = {
+		BBFD3E211FB00410006AE0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB31DBFD1FAE55AB00332EDF /* UmbrellaUITests.swift in Sources */,
+				BBFD3E2A1FB00410006AE0C5 /* UmbrellaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB31DBEF1FAE55AB00332EDF /* PBXTargetDependency */ = {
+		BBFD3E1C1FB00410006AE0C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB31DBD51FAE55AB00332EDF /* Umbrella */;
-			targetProxy = BB31DBEE1FAE55AB00332EDF /* PBXContainerItemProxy */;
+			target = BBFD3E021FB00410006AE0C5 /* Umbrella */;
+			targetProxy = BBFD3E1B1FB00410006AE0C5 /* PBXContainerItemProxy */;
 		};
-		BB31DBFA1FAE55AB00332EDF /* PBXTargetDependency */ = {
+		BBFD3E271FB00410006AE0C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB31DBD51FAE55AB00332EDF /* Umbrella */;
-			targetProxy = BB31DBF91FAE55AB00332EDF /* PBXContainerItemProxy */;
+			target = BBFD3E021FB00410006AE0C5 /* Umbrella */;
+			targetProxy = BBFD3E261FB00410006AE0C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB31DBDD1FAE55AB00332EDF /* Main.storyboard */ = {
+		BBFD3E0A1FB00410006AE0C5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB31DBDE1FAE55AB00332EDF /* Base */,
+				BBFD3E0B1FB00410006AE0C5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BB31DBE51FAE55AB00332EDF /* LaunchScreen.storyboard */ = {
+		BBFD3E121FB00410006AE0C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB31DBE61FAE55AB00332EDF /* Base */,
+				BBFD3E131FB00410006AE0C5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -319,7 +387,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BB31DBFF1FAE55AB00332EDF /* Debug */ = {
+		BBFD3E2C1FB00410006AE0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +444,7 @@
 			};
 			name = Debug;
 		};
-		BB31DC001FAE55AB00332EDF /* Release */ = {
+		BBFD3E2D1FB00410006AE0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -426,7 +494,7 @@
 			};
 			name = Release;
 		};
-		BB31DC021FAE55AB00332EDF /* Debug */ = {
+		BBFD3E2F1FB00410006AE0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -441,7 +509,7 @@
 			};
 			name = Debug;
 		};
-		BB31DC031FAE55AB00332EDF /* Release */ = {
+		BBFD3E301FB00410006AE0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -456,7 +524,7 @@
 			};
 			name = Release;
 		};
-		BB31DC051FAE55AB00332EDF /* Debug */ = {
+		BBFD3E321FB00410006AE0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -473,7 +541,7 @@
 			};
 			name = Debug;
 		};
-		BB31DC061FAE55AB00332EDF /* Release */ = {
+		BBFD3E331FB00410006AE0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -490,7 +558,7 @@
 			};
 			name = Release;
 		};
-		BB31DC081FAE55AB00332EDF /* Debug */ = {
+		BBFD3E351FB00410006AE0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -506,7 +574,7 @@
 			};
 			name = Debug;
 		};
-		BB31DC091FAE55AB00332EDF /* Release */ = {
+		BBFD3E361FB00410006AE0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -525,38 +593,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB31DBD11FAE55AB00332EDF /* Build configuration list for PBXProject "Umbrella" */ = {
+		BBFD3DFE1FB00410006AE0C5 /* Build configuration list for PBXProject "Umbrella" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB31DBFF1FAE55AB00332EDF /* Debug */,
-				BB31DC001FAE55AB00332EDF /* Release */,
+				BBFD3E2C1FB00410006AE0C5 /* Debug */,
+				BBFD3E2D1FB00410006AE0C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB31DC011FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "Umbrella" */ = {
+		BBFD3E2E1FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "Umbrella" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB31DC021FAE55AB00332EDF /* Debug */,
-				BB31DC031FAE55AB00332EDF /* Release */,
+				BBFD3E2F1FB00410006AE0C5 /* Debug */,
+				BBFD3E301FB00410006AE0C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB31DC041FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "UmbrellaTests" */ = {
+		BBFD3E311FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "UmbrellaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB31DC051FAE55AB00332EDF /* Debug */,
-				BB31DC061FAE55AB00332EDF /* Release */,
+				BBFD3E321FB00410006AE0C5 /* Debug */,
+				BBFD3E331FB00410006AE0C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB31DC071FAE55AB00332EDF /* Build configuration list for PBXNativeTarget "UmbrellaUITests" */ = {
+		BBFD3E341FB00410006AE0C5 /* Build configuration list for PBXNativeTarget "UmbrellaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB31DC081FAE55AB00332EDF /* Debug */,
-				BB31DC091FAE55AB00332EDF /* Release */,
+				BBFD3E351FB00410006AE0C5 /* Debug */,
+				BBFD3E361FB00410006AE0C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -564,17 +632,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BB31DBE01FAE55AB00332EDF /* Umbrella.xcdatamodeld */ = {
+		BBFD3E0D1FB00410006AE0C5 /* Umbrella.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BB31DBE11FAE55AB00332EDF /* Umbrella.xcdatamodel */,
+				BBFD3E0E1FB00410006AE0C5 /* Umbrella.xcdatamodel */,
 			);
-			currentVersion = BB31DBE11FAE55AB00332EDF /* Umbrella.xcdatamodel */;
+			currentVersion = BBFD3E0E1FB00410006AE0C5 /* Umbrella.xcdatamodel */;
 			path = Umbrella.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = BB31DBCE1FAE55AB00332EDF /* Project object */;
+	rootObject = BBFD3DFB1FB00410006AE0C5 /* Project object */;
 }
