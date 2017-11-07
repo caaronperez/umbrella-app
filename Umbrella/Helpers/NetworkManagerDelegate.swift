@@ -12,15 +12,15 @@ protocol NetworkManagerDelegate: class {
     func didDownloadPost(postArray: [String: Any])
 }
 
-/*protocol NetworkManagerDelegateSerie: class {
-    func didDownloadPost(postArray: Serie)
+protocol NetworkManagerDelegateHourly: class {
+    func didDownloadPost(postArray: Hourly)
 }
 
-protocol NetworkManagerDelegateSeason: class {
-    func didDownloadPost(postArray: Season)
+protocol NetworkManagerDelegateCurrent: class {
+    func didDownloadPost(postArray: Current)
 }
 
-protocol NetworkManagerDelegateChapter: class {
+/*protocol NetworkManagerDelegateChapter: class {
     func didDownloadPost(postArray: Chapter)
 }
 

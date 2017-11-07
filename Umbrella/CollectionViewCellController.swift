@@ -12,6 +12,10 @@ class CollectionViewCellController: UICollectionViewCell {
 
     static let nibName = "CollectionViewCellController"
     
+    @IBOutlet weak var civilLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var tempLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
