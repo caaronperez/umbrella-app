@@ -48,6 +48,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="110" height="110"/>
+            <connections>
+                <outlet property="civilLabel" destination="J2Q-0r-hE5" id="Wov-pF-RN9"/>
+                <outlet property="iconImage" destination="OrE-Z3-JVx" id="4ot-Yv-EFi"/>
+                <outlet property="tempLabel" destination="3VB-2e-agW" id="EG0-t4-oxc"/>
+            </connections>
             <point key="canvasLocation" x="55" y="82"/>
         </collectionViewCell>
     </objects>

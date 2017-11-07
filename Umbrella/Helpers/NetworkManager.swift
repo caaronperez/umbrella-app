@@ -10,11 +10,12 @@ import Foundation
 
 class NetworkManager {
     
-    var delegate: NetworkManagerDelegate?
+    var delegateHourly: NetworkManagerDelegateHourly?
+    var delegateCurrent: NetworkManagerDelegateCurrent?
     //var image: NetworkManagerImage?
   
-    func downloadAPIPost(imdbID: String){
-        let urlString = URL(string: "\(oMDBAPI.endPoint)\(imdbID)")
+    func downloadAPIPost(type: String){
+        let urlString = URL(string: "\(WeatherAPI.endPoint)\(type)")
         if let url = urlString {
             let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
                 if error != nil {
@@ -23,7 +24,17 @@ class NetworkManager {
                     do {
                         if let jsonArray = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] {
                             DispatchQueue.main.async {
-                                self?.delegate?.didDownloadPost(postArray: jsonArray)
+                                if jsonArray["response"] == nil{
+                                    print("Error ocurred")
+                                }else{
+                                    if(type.containsIgnoringCase(find: "hourly")){
+                                        let result = Hourly.parsePostArray(postArray: jsonArray["hourly_forecast"] as! [[String : Any]])
+                                        self?.delegateHourly?.didDownloadPost(postArray: result)
+                                 
+                                        let result2 = Current.parsePostArray(postArray: jsonArray["current_observation"] as! [String : Any])
+                                        self?.delegateCurrent?.didDownloadPost(postArray: result2)
+                                    }
+                                }
                             }
                         }
                     } catch {
@@ -55,5 +66,16 @@ class NetworkManager {
         task.resume()
     }*/
     
+}
+
+extension String {
+    
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: String.CompareOptions.caseInsensitive) != nil
+    }
 }
 

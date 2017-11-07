@@ -8,13 +8,15 @@
 
 import Foundation
 
-final class oMDBAPI{
+final class WeatherAPI{
     
     static let APIKey = "5f42f87a0bb800e1"
     static let endPoint = "http://api.wunderground.com/api/\(APIKey)/"
-    static let zipCode = "30303"
-    static let hourlyEndpoint = "hourly/q/\(zipCode).json"
-    static let conditionsEndpoint = "conditions/q/\(zipCode).json"
+    static let zipCode = "q/30303"
+    static let hourlyEndpoint = "hourly/"
+    static let conditionsEndpoint = "conditions/"
+    static let jsonFormat = ".json"
+    static let xmlFormat = ".xml"
     
     // Hourly Endpoint Dictionary Keys
     static let hour = "hour"
@@ -40,6 +42,9 @@ final class oMDBAPI{
     static let sky = "sky"
     static let wdir = "wdir"
     static let feelslike = "feelslike"
+    static let FCTTIME = "FCTTIME"
+    static let uvi = "uvi"
+    static let snow = "snow"
     
     // Current Endpoint Dictionary Keys
     static let display_location = "display_location"
