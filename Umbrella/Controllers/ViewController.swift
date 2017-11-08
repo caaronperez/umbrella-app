@@ -21,48 +21,47 @@ class ViewController: UIViewController {
     
     var hourlyWeather: Hourly!
     var currentWeather: Current!
-    
-    var zipCode: String! = "30303"
+    var zipCode: String! = "30030"
     var local: String! = "english"
     var networkRequests: [Any?] = []
     var delegateHourly:NetworkManagerDelegateHourly?
     var delegateCurrent:NetworkManagerDelegateCurrent?
-    
-    let model = generateRandomData()
-    var storedOffsets = [Int: CGFloat]()
-    
+    var delegateAlert:NetworkManagerDelegateAlert?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
-        currentZipLabel.text = zipCode
-
-        currentUnit.text = (local == "english") ? "Fº" : "Cº"
-        
-        let hourlyType = "\(WeatherAPI.hourlyEndpoint)\(WeatherAPI.conditionsEndpoint)q/\(self.zipCode as String)\(WeatherAPI.jsonFormat)"
-        let myNetworkManager = NetworkManager()
-        networkRequests.append(myNetworkManager)
-        myNetworkManager.delegateHourly = self
-        myNetworkManager.downloadAPIPost(type: hourlyType)
-        
-        let myNextNetworkManager = NetworkManager()
-        networkRequests.append(myNextNetworkManager)
-        myNetworkManager.delegateCurrent = self
-        myNetworkManager.downloadAPIPost(type: hourlyType)
-        
+        initValues()
+        executeNetworkCalls()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setupTable() {
         tableView.rowHeight = 170
-       // tableView.estimatedRowHeight = 400
-        // tableView.rowHeight = UITableViewAutomaticDimension
     }
     
+    func initValues() {
+        currentZipLabel.text = zipCode
+        currentUnit.text = (local == "english") ? "Fº" : "Cº"
+        self.title = "Home"
+    }
+    
+    func executeNetworkCalls(){
+        let hourlyType = "\(WeatherAPI.hourlyEndpoint)\(WeatherAPI.conditionsEndpoint)q/\(self.zipCode as String)\(WeatherAPI.jsonFormat)"
+        let myNetworkManager = NetworkManager()
+        networkRequests.append(myNetworkManager)
+        myNetworkManager.delegateHourly = self
+        myNetworkManager.delegateCurrent = self
+        myNetworkManager.delegateAlert = self
+        myNetworkManager.downloadAPIPost(type: hourlyType)
+    }
+}
+
+
+extension ViewController {
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if let source = sender.source as? SettingsController {
             if source.zip != nil && source.units != nil {
@@ -79,42 +78,30 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
-        
         let time: UILabel = cell.viewWithTag(10) as! UILabel
-        
         time.text = (indexPath.row == 0) ? "Today" : "Tomorrow"
-        
         cell.dropShadow()
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard let tableViewCell = cell as? TableViewCellController else { return }
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        tableViewCell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        guard let tableViewCell = cell as? TableViewCellController else { return }
-        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
     }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if hourlyWeather != nil {
             if collectionView.tag == 0 {
@@ -149,12 +136,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 let time: UILabel = cell.viewWithTag(10) as! UILabel
                 time.text = hourlyWeather.todayHours![indexPath.row].civil
                 
-                if Int(hourlyWeather.todayHours![indexPath.row].hour)! >= 6 && Int(hourlyWeather.todayHours![indexPath.row].hour)! < 18
-                {
-                    image.tintImageColor(color: UIColor.orange)
-                }else {
-                    image.tintImageColor(color: UIColor.blue)
-                }
+                (Int(hourlyWeather.todayHours![indexPath.row].hour)! >= 6 && Int(hourlyWeather.todayHours![indexPath.row].hour)! < 18) ? image.tintImageColor(color: UIColor.orange) : image.tintImageColor(color: UIColor.blue)
                 
                 let current: UILabel = cell.viewWithTag(30) as! UILabel
                 current.text = "\(hourlyWeather.todayHours![indexPath.row].temp[local]!) º"
@@ -167,11 +149,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 let time: UILabel = cell.viewWithTag(10) as! UILabel
                 time.text = hourlyWeather.tomorrowHours![indexPath.row].civil
                 
-                if Int(hourlyWeather.tomorrowHours![indexPath.row].hour)! >= 6 && Int(hourlyWeather.tomorrowHours![indexPath.row].hour)! < 18 {
-                    image.tintImageColor(color: UIColor.orange)
-                }else {
-                    image.tintImageColor(color: UIColor.blue)
-                }
+                (Int(hourlyWeather.tomorrowHours![indexPath.row].hour)! >= 6 && Int(hourlyWeather.tomorrowHours![indexPath.row].hour)! < 18) ? image.tintImageColor(color: UIColor.orange) : image.tintImageColor(color: UIColor.blue)
                 
                 let current: UILabel = cell.viewWithTag(30) as! UILabel
                 current.text = "\(hourlyWeather.tomorrowHours![indexPath.row].temp[local]!) º"
@@ -181,7 +159,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-
+extension ViewController: NetworkManagerDelegateAlert {
+    func showAlert() {
+        let alertController = UIAlertController(title: "Error!", message: "We couldn't find your location", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+}
 
 extension ViewController: NetworkManagerDelegateHourly {
     func didDownloadPost(postArray: Hourly) {
@@ -192,8 +179,9 @@ extension ViewController: NetworkManagerDelegateHourly {
 
 extension ViewController: NetworkManagerDelegateCurrent {
     func didDownloadPost(postArray: Current) {
+        
         currentWeather = postArray
-        degreeLabel.text = "\(currentWeather.currentTemp[local]!)º"
+        degreeLabel.text = "\(currentWeather.currentTemp[local]!.floatValue.cleanValue)º"
         locationLabel.text = currentWeather.city
         currentLabel.text = currentWeather.weather
         currentIcon.image = UIImage(named: currentWeather.icon)
@@ -214,42 +202,3 @@ extension ViewController: NetworkManagerDelegateCurrent {
         
     }
 }
-
-extension UIImageView {
-    func tintImageColor(color : UIColor) {
-        if self.image != nil {
-            self.image = self.image!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-            self.tintColor = color
-        }
-    }
-}
-
-extension UIView {
-    
-
-    func dropShadow(scale: Bool = true) {
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.5
-        self.layer.shadowOffset = CGSize(width: -1, height: 1)
-        self.layer.shadowRadius = 1
-        
-        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-    
-    
-    func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOpacity = opacity
-        self.layer.shadowOffset = offSet
-        self.layer.shadowRadius = radius
-        
-        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-}
-

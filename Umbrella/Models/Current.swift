@@ -10,27 +10,29 @@ import UIKit
 
 class Current: NSObject {
     
-    var currentTemp: [String: String], city: String, weather: String, icon: String
+    var currentTemp: [String: String], city: String, weather: String, icon: String, parsed: Bool
     
     override init(){
         self.currentTemp = ["":""]
         self.city = ""
         self.weather = ""
         self.icon = ""
+        self.parsed = false
     }
     
-    init(currentTemp: [String: String], city: String, weather: String, icon: String){
+    init(currentTemp: [String: String], city: String, weather: String, icon: String, parsed: Bool){
         self.currentTemp = currentTemp
         self.city = city
         self.weather = weather
         self.icon = icon
+        self.parsed = parsed
     }
     
     static func parsePostArray(postArray: [String:Any]) -> Current{
         let display_location = postArray[WeatherAPI.display_location] as! [String:Any]
         
         if let temp_f = postArray[WeatherAPI.temp_f], let temp_c = postArray[WeatherAPI.temp_c], let weather = postArray[WeatherAPI.weather], let icon = postArray[WeatherAPI.icon]{
-            return Current(currentTemp: ["english": "\(temp_f)", "metric": "\(temp_c)"], city: display_location[WeatherAPI.full] as! String, weather: weather as! String, icon: icon as! String)
+            return Current(currentTemp: ["english": "\(temp_f)", "metric": "\(temp_c)"], city: display_location[WeatherAPI.full] as! String, weather: weather as! String, icon: icon as! String, parsed: true)
         }else{
             return Current()
         }

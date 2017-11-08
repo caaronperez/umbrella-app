@@ -13,6 +13,7 @@ class Hourly: NSObject {
     var currentHour: Hour?
     var todayHours: [Hour]? = []
     var tomorrowHours: [Hour]? = []
+    var parsed: Bool = false
     
     static func parsePostArray(postArray: [[String:Any]]) -> Hourly{
         let hourly = Hourly()
@@ -37,6 +38,10 @@ class Hourly: NSObject {
             if hourParsed.hour.contains(find: hour) {
                 hourly.currentHour = hourParsed
             }
+        }
+        
+        if hourly.todayHours?.count != 0 && hourly.tomorrowHours?.count != 0 {
+            hourly.parsed = true
         }
         
         return hourly
