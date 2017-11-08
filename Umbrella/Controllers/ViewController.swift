@@ -166,8 +166,6 @@ extension ViewController: NetworkManagerDelegateAlert {
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension ViewController: NetworkManagerDelegateHourly {
