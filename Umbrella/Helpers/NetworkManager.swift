@@ -12,7 +12,7 @@ class NetworkManager {
     
     var delegateHourly: NetworkManagerDelegateHourly?
     var delegateCurrent: NetworkManagerDelegateCurrent?
-    //var image: NetworkManagerImage?
+    var delegateAlert: NetworkManagerDelegateAlert?
   
     func downloadAPIPost(type: String){
         let urlString = URL(string: "\(WeatherAPI.endPoint)\(type)")
@@ -28,11 +28,15 @@ class NetworkManager {
                                     print("Error ocurred")
                                 }else{
                                     if(type.containsIgnoringCase(find: "hourly")){
-                                        let result = Hourly.parsePostArray(postArray: jsonArray["hourly_forecast"] as! [[String : Any]])
-                                        self?.delegateHourly?.didDownloadPost(postArray: result)
-                                 
-                                        let result2 = Current.parsePostArray(postArray: jsonArray["current_observation"] as! [String : Any])
-                                        self?.delegateCurrent?.didDownloadPost(postArray: result2)
+                                        if jsonArray["hourly_forecast"] != nil, jsonArray["current_observation"] != nil {
+                                            let result = Hourly.parsePostArray(postArray: jsonArray["hourly_forecast"] as! [[String : Any]])
+                                            self?.delegateHourly?.didDownloadPost(postArray: result)
+                                     
+                                            let result2 = Current.parsePostArray(postArray: jsonArray["current_observation"] as! [String : Any])
+                                            self?.delegateCurrent?.didDownloadPost(postArray: result2)
+                                        }else {
+                                            self?.delegateAlert?.showAlert()
+                                        }
                                     }
                                 }
                             }
@@ -45,37 +49,4 @@ class NetworkManager {
             task.resume()
         }
     }
-    
-    /*func getImage(imgUrl: String){
-        
-        let imgURL = URL(string: imgUrl)
-        let task = URLSession.shared.dataTask(with: imgURL!) { [weak self] (data, response, error) in
-            if error != nil {
-                print(error as Any)
-            } else {
-                do  {
-                    if let imgData =  data{  // conditional casting.
-                        DispatchQueue.main.async { // calling the serial main queue to handle the display of information faster.
-                            self?.image?.didDownloadImage(image: UIImage(data: imgData)!)
-                        }
-                        
-                    }
-                }
-            }
-        }
-        task.resume()
-    }*/
-    
 }
-
-extension String {
-    
-    func contains(find: String) -> Bool{
-        return self.range(of: find) != nil
-    }
-    
-    func containsIgnoringCase(find: String) -> Bool{
-        return self.range(of: find, options: String.CompareOptions.caseInsensitive) != nil
-    }
-}
-

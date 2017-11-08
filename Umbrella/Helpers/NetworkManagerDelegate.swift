@@ -20,6 +20,10 @@ protocol NetworkManagerDelegateCurrent: class {
     func didDownloadPost(postArray: Current)
 }
 
+protocol NetworkManagerDelegateAlert: class {
+    func showAlert()
+}
+
 /*protocol NetworkManagerDelegateChapter: class {
     func didDownloadPost(postArray: Chapter)
 }
